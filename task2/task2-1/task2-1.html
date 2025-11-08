@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Sign In</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f3f2ef;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .logo {
+            align-self: flex-start;
+            margin-bottom: 20px;
+            margin-left: 20px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0a66c2;
+            text-decoration: none;
+        }
+
+        .logo-in {
+            display: inline-block;
+            background-color: #0a66c2;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 2px;
+            margin-left: 2px;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 32px;
+            width: 100%;
+            max-width: 400px;
+            margin-top: 40px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #666666;
+            margin-bottom: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 14px 16px;
+            font-size: 16px;
+            border: 1px solid #d0d0d0;
+            border-radius: 4px;
+            transition: border-color 0.2s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #0a66c2;
+            box-shadow: 0 0 0 1px #0a66c2;
+        }
+
+        .password-wrapper {
+            position: relative;
+        }
+
+        .show-link {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #0a66c2;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .show-link:hover {
+            text-decoration: underline;
+        }
+
+        .forgot-password {
+            color: #0a66c2;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 24px;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        .signin-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: #0a66c2;
+            color: white;
+            border: none;
+            border-radius: 24px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 24px;
+            transition: background-color 0.2s;
+        }
+
+        .signin-btn:hover {
+            background-color: #004182;
+        }
+
+        .separator {
+            display: flex;
+            align-items: center;
+            margin: 24px 0;
+            text-align: center;
+        }
+
+        .separator::before,
+        .separator::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .separator span {
+            padding: 0 16px;
+            color: #666666;
+            font-size: 14px;
+        }
+
+        .apple-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: white;
+            color: #000000;
+            border: 1px solid #000000;
+            border-radius: 24px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: background-color 0.2s;
+        }
+
+        .apple-btn:hover {
+            background-color: #f3f2ef;
+        }
+
+        .apple-logo {
+            width: 18px;
+            height: 18px;
+            background-color: #000000;
+            border-radius: 2px;
+            display: inline-block;
+        }
+
+        .join-link {
+            text-align: center;
+            margin-top: 32px;
+            font-size: 16px;
+            color: #666666;
+        }
+
+        .join-link a {
+            color: #0a66c2;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .join-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <a href="#" class="logo-text">
+            Linked<span class="logo-in">in</span>
+        </a>
+    </div>
+
+    <div class="container">
+        <h1>Sign in</h1>
+        <p class="subtitle">Stay updated on your professional world</p>
+
+        <form>
+            <div class="form-group">
+                <input type="email" placeholder="Email or Phone" required>
+            </div>
+
+            <div class="form-group">
+                <div class="password-wrapper">
+                    <input type="password" placeholder="Password" required>
+                    <a href="#" class="show-link">show</a>
+                </div>
+            </div>
+
+            <a href="#" class="forgot-password">Forgot password?</a>
+
+            <button type="submit" class="signin-btn">Sign in</button>
+
+            <div class="separator">
+                <span>or</span>
+            </div>
+
+            <button type="button" class="apple-btn">
+                <span class="apple-logo"></span>
+                Sign in with Apple
+            </button>
+        </form>
+    </div>
+
+    <div class="join-link">
+        New to LinkedIn? <a href="#">Join now</a>
+    </div>
+
+    <script>
+        const showLink = document.querySelector('.show-link');
+        const passwordInput = document.querySelector('input[type="password"]');
+
+        showLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                showLink.textContent = 'hide';
+            } else {
+                passwordInput.type = 'password';
+                showLink.textContent = 'show';
+            }
+        });
+    </script>
+</body>
+</html>

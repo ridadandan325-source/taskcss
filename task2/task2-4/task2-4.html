@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #20b2aa;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .login-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            padding: 50px 40px;
+            width: 100%;
+            max-width: 420px;
+        }
+
+        .login-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #333;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            color: #20b2aa;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px 0;
+            font-size: 16px;
+            border: none;
+            border-bottom: 2px solid #b0e0e6;
+            background-color: transparent;
+            color: #333;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-bottom-color: #20b2aa;
+        }
+
+        input::placeholder {
+            color: #999;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: #20b2aa;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .login-btn:hover {
+            background-color: #1a9b94;
+        }
+
+        .login-btn:active {
+            transform: scale(0.98);
+        }
+
+        .forgot-password {
+            text-align: center;
+        }
+
+        .forgot-password a {
+            color: #888;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .forgot-password a:hover {
+            color: #20b2aa;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <h1 class="login-title">User Login</h1>
+        
+        <form>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" value="admin" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="•••••••••" required>
+            </div>
+
+            <button type="submit" class="login-btn">Login</button>
+
+            <div class="forgot-password">
+                <a href="#">Forgot Password?</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

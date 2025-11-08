@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Scratch</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Navigation */
+        .header {
+            background-color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #666;
+            font-size: 16px;
+            padding: 8px 12px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #333;
+        }
+
+        .nav-links a.active {
+            color: #333;
+            font-weight: 600;
+        }
+
+        /* Login Form Container */
+        .login-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .login-form {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 16px;
+            border: 1px solid #d0d0d0;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+            background-color: white;
+        }
+
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #4dabf7;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #4dabf7;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        .login-btn:hover {
+            background-color: #339af0;
+        }
+
+        .login-btn:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="logo">Scratch</div>
+        <nav class="nav-links">
+            <a href="#">Signup</a>
+            <a href="#" class="active">Login</a>
+        </nav>
+    </header>
+
+    <!-- Login Form -->
+    <div class="login-container">
+        <form class="login-form">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+    </div>
+</body>
+</html>

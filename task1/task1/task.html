@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Details</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: black;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid #333;
+            margin: 0 auto;
+            background-color: white;
+        }
+
+        th {
+            background-color: #ffff00;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px 15px;
+            border: 1px solid #333;
+        }
+
+        td {
+            padding: 10px 15px;
+            border: 1px solid #333;
+        }
+
+        tr:nth-child(2) td {
+            background-color: #ffcccc;
+        }
+
+        tr:nth-child(3) td,
+        tr:nth-child(4) td {
+            background-color: white;
+        }
+
+        .name-column {
+            text-align: left;
+        }
+
+        .age-column,
+        .grade-column {
+            text-align: center;
+        }
+
+        tfoot td {
+            background-color: white;
+            text-align: center;
+            font-weight: bold;
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ninja Details</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="name-column">Ninja A</td>
+                <td class="age-column">18</td>
+                <td class="grade-column">B</td>
+            </tr>
+            <tr>
+                <td class="name-column">Ninja B</td>
+                <td class="age-column">23</td>
+                <td class="grade-column">C</td>
+            </tr>
+            <tr>
+                <td class="name-column">Ninja C</td>
+                <td class="age-column">22</td>
+                <td class="grade-column">A</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Ninja C - the best learner!</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
